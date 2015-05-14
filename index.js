@@ -1,7 +1,9 @@
 var async = require('async');
 var now = require('performance-now');
 var count = 2000;
-var limit = 200;
+var argv = process.argv.splice(2);
+var limit = argv[0] || 200;
+console.log('test with', limit, 'concurrency');
 
 function startBenchmark(name, func, callback) {
     var tasks = [];
