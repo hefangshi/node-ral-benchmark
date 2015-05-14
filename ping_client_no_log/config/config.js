@@ -5,7 +5,7 @@ module.exports.SERVER = {
     method: 'GET',
     encoding: 'utf-8',
     balance: 'roundrobin',
-    timeout: 1000,
+    timeout: 2000,
     retry: 1,
     path: '/ping',
     server: [ // 可以配置多个后端地址
