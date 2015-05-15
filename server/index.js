@@ -1,7 +1,7 @@
 var http = require('http');
 var cluster = require('cluster');
 var http = require('http');
-var numCPUs = 5;
+var numCPUs = 4;
 
 if (cluster.isMaster) {
     console.log("master start...");
@@ -39,5 +39,5 @@ if (cluster.isMaster) {
             res.end('end');
         }
 
-    }).listen(9095);
+    }).listen(8195);
 }

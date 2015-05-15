@@ -11,7 +11,7 @@ module.exports.SERVER = {
     server: [ // 可以配置多个后端地址
         {
             host: '127.0.0.1',
-            port: 9095
+            port: 8195
         }
     ]
 };
