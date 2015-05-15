@@ -78,10 +78,15 @@ var tasks = [
     },
     function (cb) {
         startBenchmark('http', httpRequest, cb);
+    },
+    function (cb) {
+        setTimeout(function () {
+            cb && cb();
+        }, 10000);
+    },
+    function (cb) {
+        startBenchmark('0ms_client_no_log', require('./ping_client_no_log/index.js').run('/ping'), cb);
     }
-    // function (cb) {
-    //     startBenchmark('0ms_client_no_log', require('./ping_client_no_log/index.js').run('/ping'), cb);
-    // },
     // function (cb) {
     //     startBenchmark('800ms_client', require('./ping_client/index.js').run('/slowping'), cb);
     // },
